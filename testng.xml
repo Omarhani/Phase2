@@ -3,8 +3,9 @@
 <suite name="Practice Suite">
     <test name="Test Basics 1">
         <classes>
-            <class name="login.LoginTests">
-            </class>
+            <class name="login.LoginTests"/>
+            <class name="checkout.CheckOutTests"></class>
+            
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

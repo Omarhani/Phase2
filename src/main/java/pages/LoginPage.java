@@ -13,10 +13,20 @@ public class LoginPage extends MethodHandles {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
-    public void login(String email,String password){
+    private void insertEmail(String email){
         sendKeys(emailFiled,email);
+    }
+    private void insertPassword(String password){
         sendKeys(passwordFiled,password);
+    }
+    private void clickOnLoginButton(){
         click(loginButton);
+    }
+
+    public HomePage login(String email, String password){
+        insertEmail(email);
+        insertPassword(password);
+        clickOnLoginButton();
+        return new HomePage(driver);
     }
 }

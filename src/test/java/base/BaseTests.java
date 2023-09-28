@@ -1,7 +1,6 @@
 package base;
 
 import com.aventstack.extentreports.ExtentReports;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
@@ -10,7 +9,7 @@ import pages.HomePage;
 import utils.JsonDataReader;
 import utils.ScreenRecorderUtil;
 import utils.UtilsTests;
-import java.io.IOException;
+
 import java.lang.reflect.Method;
 
 public class BaseTests {
@@ -23,8 +22,8 @@ public class BaseTests {
     private final String FILENAME ="testData.json";
 
     private void setUpBrowser() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        driver = new  ChromeDriver();
         driver.manage().window().maximize();
     }
 
